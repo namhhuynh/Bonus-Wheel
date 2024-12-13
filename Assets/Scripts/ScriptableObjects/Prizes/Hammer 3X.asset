@@ -16,3 +16,4 @@ MonoBehaviour:
   dropChance: 0.1
   icon: {fileID: 21300000, guid: cee7179141eca0f4bb96b21628866c5f, type: 3}
   quantity: 3
+  type: 3

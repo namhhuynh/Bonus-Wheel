@@ -11,6 +11,7 @@ public class BonusWheel : MonoBehaviour
     [SerializeField] private int numberOfSpins = 3;
     [SerializeField] private GameObject sectorPrefab;
     [SerializeField] private float radius = 200f;
+    [SerializeField] private RewardScreen rewardScreen;
 
     private float[] dropChances;
     private string[] prizeNames;
@@ -101,8 +102,16 @@ public class BonusWheel : MonoBehaviour
     {
         int winningSectorIndex = GetWinningSectorIndex(dropChances);
         float targetAngle = CalculateTargetAngle(winningSectorIndex, prizeDatabase.Prizes.Length, numberOfSpins);
-        AnimateWheel(targetAngle);
-        Debug.Log("You won: " + prizeDatabase.Prizes[winningSectorIndex].PrizeName);
+        PrizeData prize = prizeDatabase.Prizes[winningSectorIndex];
+        AnimateWheel(targetAngle, prize);
+        
+        Debug.Log("You won: " + prize.PrizeName);
+    }
+
+    private void ActivateRewardScreen(PrizeData prize)
+    {
+        rewardScreen.SetRewardScreen(prize.Icon, prize.PrizeName);
+        rewardScreen.gameObject.SetActive(true);
     }
 
     public string SpinWheelTester()
@@ -165,16 +174,14 @@ public class BonusWheel : MonoBehaviour
         return (numberOfSpins * 360f) + (winningSectorIndex * anglePerSector) + randomOffset;
     }
 
-    private void AnimateWheel(float targetAngle)
+    private void AnimateWheel(float targetAngle, PrizeData prize)
     {
-        float duration = 3f; 
+        float duration = 3f;
         wheelTransform.DORotate(new Vector3(0, 0, targetAngle), duration, RotateMode.FastBeyond360)
             .SetEase(Ease.OutQuad)
-            .OnComplete(() => Debug.Log("Spin Complete!"));
+            .OnComplete(() => ActivateRewardScreen(prize));
+
     }
-
-
-
 
 
 }

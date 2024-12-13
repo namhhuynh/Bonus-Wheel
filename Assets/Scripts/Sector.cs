@@ -12,6 +12,6 @@ public class Sector : MonoBehaviour
     {
         this.data = data;
         this.icon.sprite = icon;
-        this.quantity.text = quantity.ToString();
+        this.quantity.text = (data.Type == PrizeType.Life) ? quantity.ToString() + "mins" : quantity.ToString() + "X";
     }
 }
