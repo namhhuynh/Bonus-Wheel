@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb139318a7e5ae5459559cba558775f4, type: 3}
+  m_Name: PrizeDatabase
+  m_EditorClassIdentifier: 
+  prizes:
+  - {fileID: 11400000, guid: 9220555f10ddfc24fb24ee8dba6f5806, type: 2}
+  - {fileID: 11400000, guid: 1e385b1f34b31c54a92ae4cb179d366d, type: 2}
+  - {fileID: 11400000, guid: a0424efca9378cc49ab7af5c799b166d, type: 2}
+  - {fileID: 11400000, guid: a3424c3cdb26dc045803f157792e6189, type: 2}
+  - {fileID: 11400000, guid: 4489777caf99dc342b6f74c442bb7205, type: 2}
+  - {fileID: 11400000, guid: ea05fc8d6ee7b254396e5d39e3de67ab, type: 2}
+  - {fileID: 11400000, guid: 5f41b6636d75d4649b07a626e01fa848, type: 2}
+  - {fileID: 11400000, guid: 5a10fe5c7ec023649966da9a97a4b472, type: 2}

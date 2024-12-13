@@ -1,19 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System;
+using TMPro;
 
-[Serializable]
-public class Sector
+public class Sector : MonoBehaviour
 {
-    [SerializeField] private string prizeName;
-    [SerializeField, Range(0,1)] private float dropChance;
-    [SerializeField] private Sprite icon;
+    private PrizeData data;
+    public Image icon;
+    public TMP_Text quantity;
 
-    public string GetName(){  return prizeName; }
-
-    public float GetDropChance() {  return dropChance; }
-
-    public Sprite GetIcon() { return icon; }
-
-
+    public void SetSector(PrizeData data, Sprite icon, int quantity)
+    {
+        this.data = data;
+        this.icon.sprite = icon;
+        this.quantity.text = quantity.ToString();
+    }
 }

@@ -1,0 +1,10 @@
+Wheel Spin Results (1000 Spins):
+
+Life 30 min: 215 spins
+Brush 3X: 84 spins
+Gems 35: 93 spins
+Hammer 3X: 94 spins
+Coins 750: 72 spins
+Brush 1X: 179 spins
+Gems 75: 47 spins
+Hammer 1X: 216 spins
